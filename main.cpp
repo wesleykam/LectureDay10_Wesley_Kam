@@ -116,7 +116,7 @@ int main(int argc, char *argv[]) {
 		theVelocities.push_back(vec2(nicerRand(-4, 4), nicerRand(-4, 4)));
 	}
 	//loop through all the animations - TODO change to 60
-	for (int i=0; i < 4; i++) {
+	for (int i=0; i < 60; i++) {
 		//code to write the files
 		outFilename.append(argv[3]);
 		if (i < 10)
@@ -130,7 +130,7 @@ int main(int argc, char *argv[]) {
 		  	int i=0;
 			for (auto s: theShapes) {
 				//TODO uncomment when ready
-				//s->translate(theVelocities.at(i));
+				s->translate(theVelocities.at(i));
 				i++;
 			}
 			cout << "writing an image of size: " << sizeX << " " << sizeY << " to: " << outFilename << endl;
